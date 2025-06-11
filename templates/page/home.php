@@ -1,0 +1,1 @@
+<h1>Accueil test <?=$name?></h1>
