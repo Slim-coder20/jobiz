@@ -1,3 +1,7 @@
 <?php
+// Charger l'autoload // 
+require_once __DIR__ . '/../vendor/autoload.php';
+use App\Controller\PageController;
 
-echo "test";
+$pageController = new PageController();
+$pageController->test();
