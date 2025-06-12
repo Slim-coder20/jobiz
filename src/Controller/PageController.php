@@ -23,7 +23,7 @@ class PageController
     
     }
     protected function render (string $path, array $params = []): void
-    {  //var_dump($params);
+    {  
         $filePath = APP_ROOTE."/templates/$path.php";
         if(!file_exists($filePath))
         {
