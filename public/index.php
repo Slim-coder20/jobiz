@@ -1,11 +1,18 @@
 <?php
-// Charger l'autoload // 
-require_once __DIR__ . '/../vendor/autoload.php';
-use App\Controller\PageController;
+// Charger l'autoload
+require_once __DIR__ . "/../vendor/autoload.php";
 
-// ON défini une constante pour avoir le chemin racine de l'app // 
-define('APP_ROOTE', dirname(__DIR__));
+// On définit une constante pour avoir le chemin racine de l'app
+define('APP_ROOT', dirname(__DIR__));
+
+use App\Routing\Router;
+
+$router = new Router();
+$router->handleRequest($_SERVER["REQUEST_URI"]);
 
 
-$pageController = new PageController();
-$pageController->home();
+
+
+
+
+
